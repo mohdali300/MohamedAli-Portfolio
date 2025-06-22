@@ -1,74 +1,176 @@
 .home {
-  min-height: 60vh;
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(120deg, #0a0a0a 60%, #003366 100%);
+  align-items: center;        /* Vertically center */
+  justify-content: center;    /* Horizontal center of the hero block */
+  background: transparent;
   position: relative;
-  padding: 80px 0 40px 0;
-  text-align: center;
-  overflow: hidden;
+  padding-top: 80px;          /* for navbar */
+  box-sizing: border-box;
 }
 
 .heroContent {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 4.5rem;
   z-index: 2;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  max-width: 1050px;
+  width: 100%;
 }
 
 .profileImg {
-  width: 140px;
-  height: 140px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   box-shadow: 0 4px 32px 0 #001933bb;
-  border: 4px solid var(--color-primary);
+  border: 6px solid var(--color-primary, #00ffd0);
   object-fit: cover;
   background: #22223b;
+  margin-right: 2vw;
+  transition: transform 0.33s cubic-bezier(.62,.28,.23,.99), box-shadow 0.33s;
+}
+.profileImg:hover {
+  transform: scale(1.07) rotate(-3deg);
+  box-shadow: 0 8px 48px 0 #00ffd099;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.4rem;
+  margin-top: 20px;
 }
 
 .title {
-  font-size: 2.6rem;
-  color: var(--color-accent);
-  letter-spacing: 1px;
-  margin-bottom: 0.2em;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-accent, #00ffd0);
+  letter-spacing: 1.5px;
+  margin-bottom: 0.15em;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'monospace';
+  line-height: 1.12;
 }
 
-.subtitle {
-  font-size: 1.4rem;
+.typingWrapper {
+  display: flex;
+  align-items: center;
+  font-size: 2.3rem;
+  font-weight: 600;
   color: #fff;
-  font-weight: 400;
+  height: 2.7rem;
+  line-height: 2.7rem;
   margin-bottom: 0.7em;
+  font-family: 'JetBrains Mono', 'Fira Mono', 'monospace';
+}
+
+.typing {
+  white-space: pre;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1.1ch;
+  color: #00ffd0;
+  margin-left: 0.1em;
+  animation: blink 0.8s steps(1) infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.8em;
+  margin-bottom: 1.1em;
+}
+.icon {
+  display: inline-flex;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 #00336644;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.icon:hover {
+  transform: scale(1.17) rotate(-6deg);
+  box-shadow: 0 4px 16px 0 #00ffd099;
 }
 
 .downloadBtn {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.6em 1.3em;
-  margin-top: 1em;
-  display: inline-block;
+  background: var(--color-primary, #0070f3);
+  color: #181a1b;
+  padding: 1em 2.4em;
   border: none;
-  border-radius: 20px;
-  font-weight: 600;
+  border-radius: 32px;
+  font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.25s;
+  transition: background 0.25s, color 0.25s;
   box-shadow: 0 2px 12px 0 #00193355;
   text-decoration: none;
+  letter-spacing: 0.5px;
+  margin-top: 0.7em;
 }
 .downloadBtn:hover {
-  background: var(--color-accent);
-  color: #111;
+  background: var(--color-accent, #00ffd0);
+  color: #002244;
 }
 
-.animatedShapes {
+.loadingOverlay {
   position: absolute;
-  bottom: 15px;
-  right: 25px;
-  opacity: 0.9;
-  z-index: 1;
-  pointer-events: none;
+  inset: 0;
+  z-index: 10;
+  background: rgba(10,12,20,0.84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.loader {
+  display: flex;
+  gap: 0.6em;
+}
+.loader span {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #00ffd0, #0070f3);
+  opacity: 0.8;
+  animation: bounce 1.1s infinite alternate;
+}
+.loader span:nth-child(2) { animation-delay: 0.2s; }
+.loader span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-22px);}
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .heroContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem;
+    text-align: center;
+  }
+  .infoBlock {
+    align-items: center;
+    margin-top: 0;
+  }
+  .title, .typingWrapper {
+    text-align: center;
+  }
 }
