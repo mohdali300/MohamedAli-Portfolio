@@ -3,7 +3,7 @@ import styles from '../styles/HomeSection.module.css';
 import { useState, useEffect } from 'react';
 
 // Import FontAwesome icons from react-icons
-import { FaGithub, FaLinkedinIn, FaTelegramPlane, FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTelegramPlane, FaFacebookF, FaWhatsapp, FaBehance } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const icons = [
@@ -13,7 +13,7 @@ const icons = [
     icon: <FaGithub />
   },
   {
-    href: "https://linkedin.com/in/mohamedalii300",
+    href: "https://www.linkedin.com/in/mohamed-ali-1a9a67242",
     label: "LinkedIn",
     icon: <FaLinkedinIn />
   },
@@ -23,17 +23,22 @@ const icons = [
     icon: <MdEmail />
   },
   {
-    href: "https://t.me/yourtelegramusername",
+    href: "https://www.behance.net/mohmedali5",
+    label: "Behance",
+    icon: <FaBehance />
+  },
+  {
+    href: "https://t.me/Mohdali40",
     label: "Telegram",
     icon: <FaTelegramPlane />
   },
   {
-    href: "https://facebook.com/yourfacebookusername",
+    href: "https://www.facebook.com/share/16u8X34dvZ/",
     label: "Facebook",
     icon: <FaFacebookF />
   },
   {
-    href: "https://wa.me/201091779782",
+    href: "https://wa.me/qr/UNLGF5EH3J7XD1",
     label: "WhatsApp",
     icon: <FaWhatsapp />
   }
@@ -42,6 +47,7 @@ const icons = [
 const jobTitles = [
   "Software Engineer",
   "Backend Developer",
+  "UI & Graphic Designer",
 ];
 
 export default function HomeSection() {
@@ -114,7 +120,7 @@ export default function HomeSection() {
               </a>
             ))}
           </div>
-          <a href="/cv.pdf" download className={styles.downloadBtn}>
+          <a href="/MohamedAli-CV.pdf" download className={styles.downloadBtn}>
             Download CV (PDF)
           </a>
         </div>

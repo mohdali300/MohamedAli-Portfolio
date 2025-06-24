@@ -1,0 +1,207 @@
+.educationSection {
+  background: rgba(28, 34, 70, 0.97);
+  border-radius: 28px;
+  border: 1.5px solid rgba(100, 180, 255, 0.13);
+  box-shadow: 0 8px 36px 0 rgba(90, 180, 255, 0.11), 0 1.5px 0 0 #273456 inset;
+  padding: 2.1rem 2.2rem 2.3rem 2.2rem;
+  margin: 5rem auto 2.5rem auto;
+  max-width: 1100px;
+  color: #f0f4fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.3rem;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.animatedIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  min-height: 60px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #83eaf1 0%, #63a4ff 100%);
+  border-radius: 50%;
+  margin-right: 1.25rem;
+  box-shadow: 0 0 18px #62eafc55;
+  border: 2.5px solid #242a47;
+  flex-shrink: 0;
+}
+
+.iconSpin {
+  font-size: 2.2rem;
+  color: #fff;
+  animation: icon-bounce 1.6s infinite;
+}
+
+@keyframes icon-bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-9px);}
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #63b6ff;
+  letter-spacing: 0.02em;
+  margin: 0 1.1rem 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  text-shadow: 0 1px 10px #62eafc30;
+}
+
+.durationBox {
+  margin-left: auto;
+  background: linear-gradient(90deg, #ffe082 30%, #fffde4 100%);
+  color: #2b3146;
+  font-weight: 700;
+  font-size: 1.09rem;
+  padding: 0.47em 1.45em;
+  border-radius: 999px;
+  box-shadow: 0 2px 18px #ffe08244;
+  border: 1.5px solid #ffe08299;
+  display: flex;
+  align-items: center;
+  min-width: 182px;
+  justify-content: center;
+  text-align: center;
+  filter: drop-shadow(0 0 8px #ffe08255);
+  transition: background 0.2s;
+}
+
+.eduContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: rgba(16, 22, 45, 0.94);
+  border-radius: 24px;
+  padding: 1.7rem 1.3rem 1.35rem 1.3rem;
+  border: 1.2px solid rgba(120, 180, 255, 0.085);
+  box-shadow: 0 1px 18px 0 rgba(80, 160, 255, 0.09);
+  margin-top: 0.1rem;
+}
+
+.eduRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7em 2.2em;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  width: 100%;
+}
+
+.eduLabel {
+  font-weight: 700;
+  color: #28c6ff;
+  min-width: 150px;
+  display: inline-block;
+  font-size: 1.16rem;
+  letter-spacing: 0.01em;
+}
+
+.honor {
+  color: #ffe082;
+  font-weight: 700;
+  margin-left: 0.3em;
+  font-size: 1.11em;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+  .educationSection {
+    max-width: 98vw;
+    padding: 1.3rem 0.5rem 1.6rem 0.5rem;
+  }
+  .eduContent {
+    border-radius: 14px;
+    padding: 1rem 0.4rem 0.9rem 0.4rem;
+    gap: 0.85rem;
+  }
+  .headline {
+    font-size: 1.27rem;
+    margin-right: 0.6rem;
+  }
+  .animatedIcon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 0.6rem;
+  }
+  .iconSpin {
+    font-size: 1.09rem;
+  }
+  .durationBox {
+    font-size: 0.96rem;
+    min-width: 110px;
+    padding: 0.33em 0.85em;
+  }
+  .eduRow {
+    font-size: 0.98rem;
+    gap: 0.7em 1.1em;
+  }
+  .eduLabel {
+    font-size: 0.97rem;
+    min-width: 90px;
+  }
+}
+
+@media (max-width: 600px) {
+  .educationSection {
+    align-items: center;
+    margin: 1.1rem auto;
+    padding: 0.7rem 0.1rem 1.1rem 0.1rem;
+  }
+  .headerRow {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.85rem;
+  }
+  .animatedIcon {
+    margin: 0 0 0.47rem 0;
+  }
+  .headline {
+    margin: 0 0 0.4rem 0;
+    font-size: 1.08rem;
+    text-align: center;
+  }
+  .durationBox {
+    margin: 0;
+    align-self: center;
+    font-size: 0.85rem;
+    min-width: 91px;
+    padding: 0.21em 0.43em;
+  }
+  .eduContent {
+    border-radius: 8px;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    gap: 0.44rem;
+  }
+  .eduRow {
+    font-size: 0.85rem;
+    gap: 0.45em 0.7em;
+  }
+  .eduLabel {
+    font-size: 0.85rem;
+    min-width: 65px;
+  }
+}

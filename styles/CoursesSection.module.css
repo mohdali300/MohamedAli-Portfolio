@@ -1,0 +1,130 @@
+.section {
+  margin: 4rem 0 2rem 0;
+  padding: 0 4rem;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+  gap: 1rem;
+}
+.animatedIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 54px;
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  border-radius: 50%;
+  margin-right: 1.1rem;
+  box-shadow: 0 0 18px #ffe06655;
+  border: 2.5px solid #242a47;
+  flex-shrink: 0;
+}
+.iconSpin {
+  font-size: 2rem;
+  color: #fff;
+  animation: icon-bounce 1.6s infinite;
+}
+@keyframes icon-bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-7px);}
+}
+.headline {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 3px 20px #0002;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(320px, 1fr));
+  gap: 2.2rem;
+  justify-items: center;
+}
+.card {
+  width: 100%;
+  background: rgba(17, 27, 54, 0.96);
+  border: 2px solid #26b2ff33;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #0002;
+  padding: 1.6rem 1.3rem 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 90px;
+  max-width: 650px;
+  position: relative;
+  transition: transform 0.13s, box-shadow 0.13s;
+}
+.card:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 8px 32px #ffd20027;
+  border-color: #ffd200bb;
+}
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.3em;
+}
+.courseName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+}
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: #122f53;
+  border-radius: 50%;
+  color: #26b2ff;
+  font-size: 1rem;
+  border: 2px solid #183c57;
+  transition: background 0.15s, color 0.15s, transform 0.13s;
+}
+.iconBtn:hover,
+.iconBtn:focus {
+  background: #ffd200;
+  color: #fff;
+  transform: scale(1.13);
+}
+.org {
+  color: #9be7ff;
+  font-size: 1.01rem;
+  margin-bottom: 0.13em;
+}
+.period {
+  color: #b8b8b8; font-size: 0.98rem; margin-bottom: 0.15em;
+}
+.desc {
+  color: #e9e9f8;
+  font-size: 1.05rem;
+  margin-bottom: .7em;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .43em;
+  margin-top: .2em;
+}
+.tag {
+  background: #183c57;
+  color: #ffd200;
+  padding: .25em .9em;
+  border-radius: 11px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: .2em;
+  box-shadow: 0 2px 5px #ffd2000d;
+}
+@media (max-width: 900px) {
+  .cardsGrid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,182 @@
+.section {
+  margin: 5rem 0 2rem 0;
+  padding: 0 5rem;
+}
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+  gap: 1rem;
+}
+.animatedIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 54px;
+  width: 54px;
+  height: 54px;
+  background: linear-gradient(135deg, #83eaf1 0%, #63a4ff 100%);
+  border-radius: 50%;
+  margin-right: 1.1rem;
+  box-shadow: 0 0 18px #62eafc55;
+  border: 2.5px solid #242a47;
+  flex-shrink: 0;
+}
+.iconSpin {
+  font-size: 2rem;
+  color: #fff;
+  animation: icon-bounce 1.6s infinite;
+}
+@keyframes icon-bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-9px);}
+}
+.headline {
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 3px 20px #0002;
+  margin: 0;
+  letter-spacing: 1px;
+}
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(340px, 1fr));
+  gap: 2.2rem;
+  justify-items: center;
+}
+.card {
+  width: 100%;
+  background: rgba(17, 27, 54, 0.93);
+  border: 2px solid #26b2ff44;
+  border-radius: 20px;
+  box-shadow: 0 2px 24px #0002;
+  padding: 2rem 1.7rem 1.2rem 1.7rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 320px;
+  max-width: 650px;
+  transition: transform 0.13s, box-shadow 0.13s;
+}
+.card:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 8px 32px #26b2ff13;
+  border-color: #26b2ffbb;
+}
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  width: 100%;
+}
+.headerMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.projectName {
+  font-size: 1.23rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2em;
+  vertical-align: middle;
+}
+.role {
+  color: #9be7ff;
+  font-size: 1.01rem;
+  margin-bottom: 0.2em;
+}
+.cardIcons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  margin-left: 0.7rem;
+  margin-top: 0.1rem;
+}
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: #122f53;
+  border-radius: 50%;
+  color: #26b2ff;
+  font-size: 1.1rem;
+  border: 2px solid #183c57;
+  transition: background 0.15s, color 0.15s, transform 0.13s;
+}
+.iconBtn:hover,
+.iconBtn:focus {
+  background: #26b2ff;
+  color: #fff;
+  transform: scale(1.13);
+}
+.responsibilities {
+  font-size: 1.07rem;
+  margin-bottom: 0.8rem;
+}
+.respTitle {
+  color: #26b2ff;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.responsibilities ul {
+  margin-top: 0.18em;
+  margin-left: 1.5em;
+  color: #bde4fd;
+  font-size: 1rem;
+}
+.technologies {
+  margin-top: 1.3rem;
+  border-top: 1.5px solid #183c57;
+  padding-top: 0.7rem;
+}
+.techTitle {
+  color: #26b2ff;
+  font-weight: 600;
+  margin-bottom: 0.18rem;
+  font-size: 1.02rem;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55em;
+  margin-top: .2em;
+}
+.tag {
+  display: inline-block;
+  background: #183c57;
+  color: #26b2ff;
+  padding: .34em 1.05em;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: .4em;
+  box-shadow: 0 2px 6px #26b2ff0d;
+}
+@media (max-width: 1000px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .card {
+    max-width: 100%;
+    min-height: 0;
+  }
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 0 0.7rem;
+  }
+  .card {
+    padding: 1.2rem 0.7rem 0.8rem 0.7rem;
+  }
+  .projectName {
+    font-size: 1.08rem;
+  }
+}

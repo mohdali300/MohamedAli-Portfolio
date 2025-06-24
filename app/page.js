@@ -1,5 +1,6 @@
 import HomeSection from '../components/HomeSection';
 import AboutSection from '../components/AboutSection';
+import EducationSection from '../components/EducationSection';
 import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection';
 import ProjectsSection from '../components/ProjectsSection';
@@ -12,8 +13,9 @@ export default function Home() {
     <>
       <HomeSection />
       <AboutSection />
-      <SkillsSection />
+      <EducationSection />
       <ExperienceSection />
+      <SkillsSection />
       <ProjectsSection />
       <ActivitiesSection />
       <CoursesSection />
