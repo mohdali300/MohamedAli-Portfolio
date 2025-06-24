@@ -5,6 +5,10 @@ import Navbar from '../components/Navbar';
 export const metadata = {
   title: 'Mohamed Ali | Portfolio',
   description: 'Software Engineer | Backend Developer — Mohamed Ali Ahmed',
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
