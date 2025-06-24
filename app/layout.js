@@ -3,7 +3,7 @@ import ProgrammingSpaceBackground from '../components/ProgrammingSpaceBackground
 import Navbar from '../components/Navbar';
 
 export const metadata = {
-  title: 'Mohamed Ali Ahmed | Portfolio',
+  title: 'Mohamed Ali | Portfolio',
   description: 'Software Engineer | Backend Developer — Mohamed Ali Ahmed',
 };
 

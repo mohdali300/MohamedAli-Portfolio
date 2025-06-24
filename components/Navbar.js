@@ -11,10 +11,12 @@ export default function Navbar() {
   const navLinks = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "Education", href: "#education" },
     { label: "Experience", href: "#experience" },
+    { label: "Skills", href: "#skills" },
     { label: "Projects", href: "#projects" },
     { label: "Activities", href: "#activities" },
+    { label: "Certifications", href: "#courses" },
     { label: "Contact", href: "#contact" },
   ];
 

@@ -1,0 +1,51 @@
+.footer {
+  width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  padding: 2.5rem 0 2rem 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #bfcfff;
+  font-family: 'Fira Mono', 'Fira Code', 'Consolas', monospace;
+  user-select: none;
+}
+
+.quote {
+  font-size: 1.35rem;
+  font-style: italic;
+  text-align: center;
+  color: #bfa0ff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.9rem;
+  background: linear-gradient(90deg, #4fd1ff 0%, #c471ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.credits {
+  margin-bottom: 1rem;
+  font-size: 1.07rem;
+  color: #a3b0e1;
+}
+
+.by {
+  color: #39c6ff;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.name {
+  color: #ff91bc;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.copy {
+  font-size: 0.98rem;
+  color: #6e7991;
+  margin-top: 0.1rem;
+}

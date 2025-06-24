@@ -17,7 +17,7 @@
   min-height: 54px;
   width: 54px;
   height: 54px;
-  background: linear-gradient(135deg, #83eaf1 0%, #63a4ff 100%);
+  background: linear-gradient(135deg, #E1FFBB 0%, #009990 100%);
   border-radius: 50%;
   margin-right: 1.1rem;
   box-shadow: 0 0 18px #62eafc55;
@@ -63,8 +63,8 @@
 }
 .card:hover {
   transform: translateY(-7px) scale(1.02);
-  box-shadow: 0 8px 32px #26b2ff13;
-  border-color: #26b2ffbb;
+  box-shadow: 0 8px 32px #00999013;
+  border-color: #009990bb;
 }
 .cardHeader {
   display: flex;
@@ -110,9 +110,8 @@
   border: 2px solid #183c57;
   transition: background 0.15s, color 0.15s, transform 0.13s;
 }
-.iconBtn:hover,
-.iconBtn:focus {
-  background: #26b2ff;
+.iconBtn:hover {
+  background: #009990;
   color: #fff;
   transform: scale(1.13);
 }

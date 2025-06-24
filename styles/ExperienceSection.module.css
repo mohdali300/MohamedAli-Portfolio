@@ -33,13 +33,13 @@
   text-align: center;
 }
 .tabItem:hover, .tabItem:focus {
-  border-color: #26b2ff;
+  border-color: #83eaf1;
   background: rgba(20, 30, 54, 0.97);
 }
 .active {
-  border-color: #26b2ff;
+  border-color: #83eaf1;
   background: linear-gradient(90deg, #0c1836 70%, #122f53 100%);
-  color: #26b2ff;
+  color: #83eaf1;
   font-weight: 600;
 }
 .company {
@@ -140,7 +140,7 @@
   min-height: 54px;
   width: 54px;
   height: 54px;
-  background: linear-gradient(135deg, #83eaf1 0%, #63a4ff 100%);
+  background: linear-gradient(135deg, #83eaf1 0%, #4DA1A9 100%);
   border-radius: 50%;
   margin-right: 1.1rem;
   box-shadow: 0 0 18px #62eafc55;

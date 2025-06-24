@@ -1,5 +1,5 @@
 .section {
-  margin: 5rem 0 2rem 0;
+  margin: 6rem 0 2rem 0;
   padding: 0 5rem;
 }
 .headerRow {
@@ -63,8 +63,8 @@
 }
 .card:hover {
   transform: translateY(-7px) scale(1.02);
-  box-shadow: 0 8px 32px #26b2ff13;
-  border-color: #26b2ffbb;
+  box-shadow: 0 8px 32px #f7b73313;
+  border-color: #f7b733bb;
 }
 .titleRow {
   display: flex;
