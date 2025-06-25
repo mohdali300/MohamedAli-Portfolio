@@ -1,6 +1,6 @@
 .section {
   margin: 5rem 0 2rem 0;
-  padding: 0 5rem;
+  padding: 0 2rem;
 }
 .headerRow {
   display: flex;
@@ -58,7 +58,7 @@
   flex-direction: column;
   position: relative;
   min-height: 320px;
-  max-width: 650px;
+  max-width: 600px;
   transition: transform 0.13s, box-shadow 0.13s;
 }
 .card:hover {
