@@ -9,6 +9,16 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
   },
+  keywords: [
+    "Mohamed Ali",
+    "Software Engineer",
+    "Backend Developer",
+    "Portfolio",
+    "Web Development",
+    "Programming",
+    ".net",
+    "C#",
+  ],
 };
 
 export default function RootLayout({ children }) {
