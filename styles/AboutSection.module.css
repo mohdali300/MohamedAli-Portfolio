@@ -12,7 +12,6 @@
   color: #e8eaf6;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   box-sizing: border-box;
   width: 100%;
   transition: box-shadow 0.3s;
@@ -33,7 +32,6 @@
   transition: opacity 0.7s cubic-bezier(.33,1,.68,1), transform 0.7s cubic-bezier(.33,1,.68,1);
 }
 
-/* ...the rest of your CSS from previous version... */
 .headerRow {
   display: flex;
   align-items: center;
@@ -126,11 +124,29 @@
 @media (max-width: 650px) {
   .aboutSection {
     padding: 1.5rem 1rem 1.2rem 1rem;
-    max-width: 98vw;
-    min-width: 0;
+    margin: 2rem auto 2.5rem auto; 
+    max-width: calc(100vw - 2rem); 
+    width: calc(100vw - 2rem);
+    position: relative;
+    left: auto;
+    transform: none;
   }
+  
+  .headerRow {
+    margin-bottom: 0.8rem;
+    justify-content: left; 
+  }
+  
   .headline {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    text-align: left; 
+    white-space: normal; 
+  }
+  
+  .content {
+    font-size: 0.97rem;
+    margin-bottom: 1.1rem;
+    text-align: left; 
   }
   .animatedIcon {
     width: 38px;
@@ -139,47 +155,63 @@
     min-height: 38px;
     margin-right: 0.7rem;
   }
+  
   .iconSpin {
     font-size: 1.25rem;
   }
+  
   .quote {
     font-size: 0.98rem;
     padding-top: 0.7rem;
     margin-top: 1.3rem;
   }
-  .content {
-    font-size: 0.97rem;
-    margin-bottom: 1.1rem;
-  }
-  .headerRow {
-    margin-bottom: 0.8rem;
-  }
 }
 
 @media (max-width: 420px) {
   .aboutSection {
-    padding: 0.9rem 0.3rem 0.7rem 0.3rem;
+    padding: 0.9rem 0.8rem 0.7rem 0.8rem;
+    margin: 2rem auto 2.5rem auto;
+    max-width: calc(100vw - 1rem); 
+    width: calc(100vw - 1rem);
+    position: relative;
+    left: auto;
+    transform: none;
   }
-  .headline {
-    font-size: 1.05rem;
+  
+  .headerRow {
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
   }
+  
   .animatedIcon {
     width: 28px;
     height: 28px;
     min-width: 28px;
     min-height: 28px;
-    margin-right: 0.4rem;
+    margin-right: 0; 
+    margin-bottom: 0.5rem;
   }
+  
+  .headline {
+    font-size: 1.5rem;
+    text-align: center;
+    white-space: normal;
+  }
+  
+  .content {
+    font-size: 0.87rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+  }
+  
   .iconSpin {
     font-size: 0.93rem;
   }
+  
   .quote {
     font-size: 0.85rem;
     padding-top: 0.4rem;
     margin-top: 0.7rem;
-  }
-  .content {
-    font-size: 0.87rem;
-    margin-bottom: 0.7rem;
   }
 }
