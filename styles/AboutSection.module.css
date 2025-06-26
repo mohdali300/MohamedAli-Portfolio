@@ -120,98 +120,196 @@
   box-sizing: border-box;
 }
 
-/* Responsive design */
-@media (max-width: 650px) {
+/* Tablet and small desktop adjustments */
+@media (max-width: 1024px) {
   .aboutSection {
-    padding: 1.5rem 1rem 1.2rem 1rem;
-    margin: 2rem auto 2.5rem auto; 
-    max-width: calc(100vw - 2rem); 
+    max-width: 95%;
+    margin: 2rem auto;
+    padding: 2rem 1.8rem 1.8rem 1.8rem;
+  }
+}
+
+/* Mobile landscape and large mobile portrait */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 1.8rem 1.5rem 1.5rem 1.5rem;
+    margin: 1.5rem auto 2rem auto;
+    max-width: calc(100vw - 2rem);
     width: calc(100vw - 2rem);
-    position: relative;
-    left: auto;
-    transform: none;
+    border-radius: 16px;
   }
   
   .headerRow {
-    margin-bottom: 0.8rem;
-    justify-content: left; 
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+  }
+  
+  .animatedIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    margin-right: 1rem;
+  }
+  
+  .iconSpin {
+    font-size: 1.6rem;
+  }
+  
+  .headline {
+    font-size: 1.7rem;
+    white-space: normal;
+    line-height: 1.2;
+  }
+  
+  .content {
+    font-size: 1.1rem;
+    margin-bottom: 1.4rem;
+    line-height: 1.6;
+  }
+  
+  .quote {
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding-top: 0.9rem;
+  }
+}
+
+/* Standard mobile portrait */
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 1.5rem 1.2rem 1.3rem 1.2rem;
+    margin: 1rem auto 1.5rem auto;
+    max-width: calc(100vw - 1.5rem);
+    width: calc(100vw - 1.5rem);
+    border-radius: 14px;
+  }
+  
+  .headerRow {
+    margin-bottom: 0.9rem;
+    justify-content: flex-start;
+  }
+  
+  .animatedIcon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    margin-right: 0.9rem;
+  }
+  
+  .iconSpin {
+    font-size: 1.4rem;
   }
   
   .headline {
     font-size: 1.5rem;
-    text-align: left; 
-    white-space: normal; 
+    line-height: 1.25;
+    white-space: normal;
   }
   
   .content {
-    font-size: 0.97rem;
-    margin-bottom: 1.1rem;
-    text-align: left; 
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.65;
   }
+  
+  .quote {
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    padding-top: 0.8rem;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 375px) {
+  .aboutSection {
+    padding: 1.3rem 1rem 1.1rem 1rem;
+    margin: 0.8rem auto 1.2rem auto;
+    max-width: calc(100vw - 1rem);
+    width: calc(100vw - 1rem);
+    border-radius: 12px;
+  }
+  
+  .headerRow {
+    margin-bottom: 0.8rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  
   .animatedIcon {
     width: 38px;
     height: 38px;
     min-width: 38px;
     min-height: 38px;
-    margin-right: 0.7rem;
+    margin-right: 0.8rem;
   }
   
   .iconSpin {
-    font-size: 1.25rem;
-  }
-  
-  .quote {
-    font-size: 0.98rem;
-    padding-top: 0.7rem;
-    margin-top: 1.3rem;
-  }
-}
-
-@media (max-width: 420px) {
-  .aboutSection {
-    padding: 0.9rem 0.8rem 0.7rem 0.8rem;
-    margin: 2rem auto 2.5rem auto;
-    max-width: calc(100vw - 1rem); 
-    width: calc(100vw - 1rem);
-    position: relative;
-    left: auto;
-    transform: none;
-  }
-  
-  .headerRow {
-    justify-content: center;
-    flex-direction: column; 
-    text-align: center;
-  }
-  
-  .animatedIcon {
-    width: 28px;
-    height: 28px;
-    min-width: 28px;
-    min-height: 28px;
-    margin-right: 0; 
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
   }
   
   .headline {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.35rem;
+    line-height: 1.3;
     white-space: normal;
   }
   
   .content {
-    font-size: 0.87rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  .quote {
+    font-size: 0.9rem;
+    margin-top: 1.3rem;
+    padding-top: 0.7rem;
+  }
+}
+
+/* Very small mobile phones */
+@media (max-width: 320px) {
+  .aboutSection {
+    padding: 1.1rem 0.8rem 0.9rem 0.8rem;
+    margin: 0.5rem auto 1rem auto;
+    max-width: calc(100vw - 0.8rem);
+    width: calc(100vw - 0.8rem);
+    border-radius: 10px;
+  }
+  
+  .headerRow {
     margin-bottom: 0.7rem;
-    text-align: center;
+    justify-content: flex-start;
+  }
+  
+  .animatedIcon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    min-height: 34px;
+    margin-right: 0.7rem;
   }
   
   .iconSpin {
-    font-size: 0.93rem;
+    font-size: 1.1rem;
+  }
+  
+  .headline {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    white-space: normal;
+  }
+  
+  .content {
+    font-size: 0.9rem;
+    margin-bottom: 0.9rem;
+    line-height: 1.75;
   }
   
   .quote {
     font-size: 0.85rem;
-    padding-top: 0.4rem;
-    margin-top: 0.7rem;
+    margin-top: 1.1rem;
+    padding-top: 0.6rem;
   }
 }

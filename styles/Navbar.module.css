@@ -18,6 +18,7 @@
   width: 100%;
   padding: 0.5rem 2rem;
   position: relative;
+  min-height: 60px;
 }
 
 .logo {
@@ -27,6 +28,7 @@
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 1px;
+  z-index: 1030;
 }
 
 .logoIcon {
@@ -91,10 +93,19 @@
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 1021;
+  z-index: 1031;
   margin-left: 1.5rem;
-  padding: 6px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
 }
+
+.laptopToggle:active,
+.laptopToggle:focus {
+  background-color: rgba(0, 255, 208, 0.1);
+  outline: none;
+}
+
 .laptopIcon {
   font-size: 2.3rem;
   color: #00ffd0;
@@ -103,8 +114,10 @@
   box-shadow: 0 1px 8px 0 #00ffd033;
   padding: 4px 6px 2px 7px;
   border: 2px solid #00ffd0;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+  transition: all 0.2s ease;
+  display: block;
 }
+
 .laptopToggle:active .laptopIcon,
 .laptopToggle:focus .laptopIcon,
 .laptopToggle:hover .laptopIcon {
@@ -112,54 +125,274 @@
   color: #10162e;
   border: 2px solid #00ffd0;
   box-shadow: 0 2px 16px #00ffd099;
+  transform: scale(0.95);
 }
 
-@media (max-width: 900px) {
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1010;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .navContent {
+    padding: 0.6rem 1.5rem;
+    min-height: 64px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .logoIcon {
+    font-size: 1.9rem;
+  }
+  
   .laptopToggle {
     display: block;
+    padding: 10px;
+    margin-left: 1rem;
   }
+  
+  .laptopIcon {
+    font-size: 2rem;
+    padding: 6px 8px 4px 8px;
+  }
+  
   .links {
     flex-direction: column;
     gap: 0;
-    background: rgba(10, 10, 30, 0.99);
+    background: rgba(8, 8, 25, 0.98);
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 220px;
+    right: -280px;
+    width: 260px;
     height: 100vh;
-    padding-top: 80px;
-    box-shadow: -4px 0 24px #000a;
-    transition: right 0.3s cubic-bezier(.62,.28,.23,.99);
+    padding-top: 85px;
+    box-shadow: -4px 0 24px rgba(0,0,0,0.4);
+    transition: right 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 1020;
+    backdrop-filter: blur(10px);
   }
+  
   .showMenu {
     right: 0;
   }
+  
   .links li {
     margin: 0;
     padding: 0;
     text-align: left;
   }
+  
   .links li a {
     display: block;
-    padding: 1.2em 2em;
-    font-size: 1.15rem;
+    padding: 1.1em 1.8em;
+    font-size: 1.1rem;
     border-radius: 0;
     border-left: 4px solid transparent;
-    transition: background 0.18s, border 0.18s;
+    transition: all 0.2s ease;
+    position: relative;
   }
+  
+  .links li a::after {
+    display: none;
+  }
+  
   .links li a:hover,
-  .links li a:focus {
-    background: #11152a;
+  .links li a:focus,
+  .links li a:active {
+    background: rgba(17, 21, 42, 0.8);
     color: #00ffd0;
     border-left: 4px solid #00ffd0;
+    transform: translateX(4px);
   }
 }
 
-.overlay {
-  display: block;
-  position: fixed;
-  inset: 0;
-  z-index: 1010;
-  background: rgba(0,0,0,0.33);
+/* Mobile landscape and small tablets */
+@media (max-width: 640px) {
+  .navContent {
+    padding: 0.5rem 1.2rem;
+    min-height: 58px;
+  }
+  
+  .logo {
+    font-size: 1.1rem;
+  }
+  
+  .logoIcon {
+    font-size: 1.7rem;
+    margin-right: 0.2em;
+  }
+  
+  .laptopToggle {
+    padding: 8px;
+    margin-left: 0.8rem;
+  }
+  
+  .laptopIcon {
+    font-size: 1.8rem;
+    padding: 5px 7px 3px 7px;
+  }
+  
+  .links {
+    width: 240px;
+    right: -250px;
+    padding-top: 75px;
+  }
+  
+  .links li a {
+    font-size: 1.05rem;
+    padding: 1em 1.5em;
+  }
+}
+
+/* Mobile portrait - primary phone optimization */
+@media (max-width: 480px) {
+  .navContent {
+    padding: 0.4rem 1rem;
+    min-height: 56px;
+  }
+  
+  .logo {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .logoIcon {
+    font-size: 1.5rem;
+    margin-right: 0.15em;
+  }
+  
+  .laptopToggle {
+    padding: 6px;
+    margin-left: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .laptopIcon {
+    font-size: 1.6rem;
+    padding: 4px 6px 2px 6px;
+    border-radius: 0.5em;
+  }
+  
+  .links {
+    width: 220px;
+    right: -230px;
+    padding-top: 70px;
+    box-shadow: -2px 0 20px rgba(0,0,0,0.5);
+  }
+  
+  .links li a {
+    font-size: 1rem;
+    padding: 0.9em 1.3em;
+    border-left-width: 3px;
+  }
+  
+  .links li a:active {
+    background: rgba(0, 255, 208, 0.15);
+    transform: translateX(2px);
+  }
+  
+  .overlay {
+    background: rgba(0,0,0,0.5);
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .navContent {
+    padding: 0.3rem 0.8rem;
+    min-height: 52px;
+  }
+  
+  .logo {
+    font-size: 0.9rem;
+  }
+  
+  .logoIcon {
+    font-size: 1.3rem;
+  }
+  
+  .laptopToggle {
+    margin-left: 0.3rem;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  
+  .laptopIcon {
+    font-size: 1.4rem;
+    padding: 3px 5px 2px 5px;
+  }
+  
+  .links {
+    width: 200px;
+    right: -210px;
+    padding-top: 65px;
+  }
+  
+  .links li a {
+    font-size: 0.95rem;
+    padding: 0.8em 1.2em;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .logoIcon {
+    animation: none;
+  }
+  
+  .links,
+  .overlay,
+  .laptopIcon,
+  .links li a {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .navbar {
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom: 1px solid #00ffd0;
+  }
+  
+  .links li a:hover,
+  .links li a:focus {
+    background: #00ffd0;
+    color: #000;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .laptopToggle {
+    min-width: 48px;
+    min-height: 48px;
+  }
+  
+  .links li a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .links li a:hover::after {
+    transform: scaleX(0);
+  }
 }

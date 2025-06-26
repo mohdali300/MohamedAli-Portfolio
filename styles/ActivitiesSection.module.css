@@ -2,6 +2,7 @@
   margin: 6rem 0 2rem 0;
   padding: 0 2rem;
 }
+
 .headerRow {
   display: flex;
   align-items: center;
@@ -9,6 +10,7 @@
   margin-bottom: 2.2rem;
   gap: 1rem;
 }
+
 .animatedIcon {
   display: flex;
   align-items: center;
@@ -24,15 +26,18 @@
   border: 2.5px solid #242a47;
   flex-shrink: 0;
 }
+
 .iconSpin {
   font-size: 2rem;
   color: #fff;
   animation: icon-bounce 1.6s infinite;
 }
+
 @keyframes icon-bounce {
   0%, 100% { transform: translateY(0);}
   50% { transform: translateY(-9px);}
 }
+
 .headline {
   font-size: 2.1rem;
   font-weight: 800;
@@ -41,12 +46,14 @@
   margin: 0;
   letter-spacing: 1px;
 }
+
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(320px, 1fr));
   gap: 2.2rem;
   justify-items: center;
 }
+
 .card {
   width: 100%;
   background: rgba(17, 27, 54, 0.96);
@@ -61,22 +68,26 @@
   position: relative;
   transition: transform 0.13s, box-shadow 0.13s;
 }
+
 .card:hover {
   transform: translateY(-7px) scale(1.02);
   box-shadow: 0 8px 32px #f7b73313;
   border-color: #f7b733bb;
 }
+
 .titleRow {
   display: flex;
   align-items: center;
   gap: 0.7rem;
   margin-bottom: 0.3em;
 }
+
 .activityName {
   font-size: 1.19rem;
   font-weight: 700;
   color: #fff;
 }
+
 .iconBtn {
   display: inline-flex;
   align-items: center;
@@ -90,32 +101,40 @@
   border: 2px solid #183c57;
   transition: background 0.15s, color 0.15s, transform 0.13s;
 }
+
 .iconBtn:hover,
 .iconBtn:focus {
   background: #26b2ff;
   color: #fff;
   transform: scale(1.13);
 }
+
 .org {
   color: #9be7ff;
   font-size: 1.01rem;
   margin-bottom: 0.15em;
 }
+
 .period {
-  color: #b8b8b8; font-size: 0.98rem; margin-bottom: 0.15em;
+  color: #b8b8b8; 
+  font-size: 0.98rem; 
+  margin-bottom: 0.15em;
 }
+
 .desc {
   color: #e9e9f8;
   font-size: 1.05rem;
   margin-top: 1rem;
   margin-bottom: .7em;
 }
+
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: .43em;
   margin-top: .2em;
 }
+
 .tag {
   background: #183c57;
   color: #26b2ff;
@@ -126,6 +145,341 @@
   margin-bottom: .2em;
   box-shadow: 0 2px 5px #26b2ff0d;
 }
+
+/* Tablet and small desktop */
+@media (max-width: 1024px) {
+  .section {
+    margin: 5rem 0 2rem 0;
+    padding: 0 1.5rem;
+  }
+  
+  .cardsGrid {
+    gap: 1.8rem;
+  }
+}
+
+/* Large tablet and mobile landscape */
 @media (max-width: 900px) {
-  .cardsGrid { grid-template-columns: 1fr; }
+  .cardsGrid { 
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section {
+    margin: 4rem 0 2rem 0;
+    padding: 0 1.2rem;
+  }
+  
+  .headerRow {
+    margin-bottom: 1.8rem;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Mobile landscape and large mobile portrait */
+@media (max-width: 768px) {
+  .section {
+    margin: 3.5rem 0 1.5rem 0;
+    padding: 0 1rem;
+  }
+  
+  .headerRow {
+    margin-bottom: 1.5rem;
+    gap: 0.8rem;
+  }
+  
+  .animatedIcon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    margin-right: 0.9rem;
+  }
+  
+  .iconSpin {
+    font-size: 1.6rem;
+  }
+  
+  .headline {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .cardsGrid {
+    gap: 1.3rem;
+  }
+  
+  .card {
+    padding: 1.4rem 1.1rem 1rem 1.1rem;
+    border-radius: 16px;
+    min-height: 160px;
+  }
+  
+  .activityName {
+    font-size: 1.1rem;
+  }
+  
+  .iconBtn {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .org {
+    font-size: 0.95rem;
+  }
+  
+  .period {
+    font-size: 0.9rem;
+  }
+  
+  .desc {
+    font-size: 0.98rem;
+    margin-top: 0.8rem;
+  }
+  
+  .tag {
+    font-size: 0.85rem;
+    padding: .2em .7em;
+  }
+}
+
+/* Standard mobile portrait */
+@media (max-width: 480px) {
+  .section {
+    margin: 3rem 0 1.5rem 0;
+    padding: 0 0.8rem;
+  }
+  
+  .headerRow {
+    margin-bottom: 1.3rem;
+    gap: 0.7rem;
+  }
+  
+  .animatedIcon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    margin-right: 0.8rem;
+  }
+  
+  .iconSpin {
+    font-size: 1.4rem;
+  }
+  
+  .headline {
+    font-size: 1.6rem;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+  
+  .cardsGrid {
+    gap: 1.1rem;
+  }
+  
+  .card {
+    padding: 1.2rem 1rem 0.9rem 1rem;
+    border-radius: 14px;
+    min-height: 140px;
+  }
+  
+  .titleRow {
+    gap: 0.5rem;
+    margin-bottom: 0.2em;
+    flex-wrap: wrap;
+  }
+  
+  .activityName {
+    font-size: 1.05rem;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .iconBtn {
+    width: 1.6rem;
+    height: 1.6rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  
+  .org {
+    font-size: 0.9rem;
+  }
+  
+  .period {
+    font-size: 0.85rem;
+  }
+  
+  .desc {
+    font-size: 0.92rem;
+    margin-top: 0.7rem;
+    line-height: 1.5;
+  }
+  
+  .tags {
+    gap: .3em;
+  }
+  
+  .tag {
+    font-size: 0.8rem;
+    padding: .15em .6em;
+    border-radius: 8px;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 375px) {
+  .section {
+    margin: 2.5rem 0 1.2rem 0;
+    padding: 0 0.6rem;
+  }
+  
+  .headerRow {
+    margin-bottom: 1.1rem;
+    gap: 0.6rem;
+  }
+  
+  .animatedIcon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    margin-right: 0.7rem;
+  }
+  
+  .iconSpin {
+    font-size: 1.2rem;
+  }
+  
+  .headline {
+    font-size: 1.45rem;
+    letter-spacing: 0.2px;
+  }
+  
+  .cardsGrid {
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1.1rem 0.9rem 0.8rem 0.9rem;
+    border-radius: 12px;
+    min-height: 130px;
+  }
+  
+  .titleRow {
+    gap: 0.4rem;
+  }
+  
+  .activityName {
+    font-size: 1rem;
+  }
+  
+  .iconBtn {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .org {
+    font-size: 0.85rem;
+  }
+  
+  .period {
+    font-size: 0.8rem;
+  }
+  
+  .desc {
+    font-size: 0.88rem;
+    margin-top: 0.6rem;
+    line-height: 1.55;
+  }
+  
+  .tag {
+    font-size: 0.75rem;
+    padding: .12em .5em;
+  }
+}
+
+/* Very small mobile phones */
+@media (max-width: 320px) {
+  .section {
+    margin: 2rem 0 1rem 0;
+    padding: 0 0.5rem;
+  }
+  
+  .headerRow {
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .animatedIcon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    margin-right: 0.6rem;
+  }
+  
+  .iconSpin {
+    font-size: 1.1rem;
+  }
+  
+  .headline {
+    font-size: 1.3rem;
+    letter-spacing: 0.1px;
+  }
+  
+  .cardsGrid {
+    gap: 0.9rem;
+  }
+  
+  .card {
+    padding: 1rem 0.8rem 0.7rem 0.8rem;
+    border-radius: 10px;
+    min-height: 120px;
+  }
+  
+  .titleRow {
+    gap: 0.3rem;
+    align-items: flex-start;
+  }
+  
+  .activityName {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  
+  .iconBtn {
+    width: 1.4rem;
+    height: 1.4rem;
+    font-size: 0.7rem;
+    margin-top: 0.1rem;
+  }
+  
+  .org {
+    font-size: 0.8rem;
+  }
+  
+  .period {
+    font-size: 0.75rem;
+  }
+  
+  .desc {
+    font-size: 0.84rem;
+    margin-top: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .tags {
+    gap: .25em;
+  }
+  
+  .tag {
+    font-size: 0.7rem;
+    padding: .1em .4em;
+  }
 }
