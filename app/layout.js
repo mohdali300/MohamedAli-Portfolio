@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import ProgrammingSpaceBackground from '../components/ProgrammingSpaceBackground';
 import Navbar from '../components/Navbar';
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: 'Mohamed Ali | Portfolio',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
       <body>
         <ProgrammingSpaceBackground />
         <Navbar />
+        <Analytics />
         <main style={{ position: "relative", zIndex: 1 }}>
           {children}
         </main>
